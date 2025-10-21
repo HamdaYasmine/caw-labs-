@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaza Genocide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #e74c3c;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #c0392b;
+        }
+        .content-section {
+            background-color: white;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border-radius: 5px;
+        }
+        video {
+            width: 100%;
+            max-width: 600px;
+            display: block;
+            margin: 20px auto;
+            border-radius: 5px;
+        }
+        ul {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        li {
+            margin-bottom: 12px;
+            padding: 8px;
+            border-left: 3px solid #3498db;
+            background-color: #ecf0f1;
+        }
+        a {
+            color: #2980b9;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+            color: #e74c3c;
+        }
+        .stat-box {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-left: 4px solid #fdcb6e;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body id="top">
+    <h1>Main Content</h1>
+    
+    <div class="content-section">
+        <p>The ongoing situation in Gaza since October 7, 2023, has resulted in catastrophic humanitarian consequences and widespread destruction.</p>
+        
+        <div class="stat-box">
+            <h3>Humanitarian Impact Statistics:</h3>
+            <p><strong>Martyrs:</strong> Over 35,000 Palestinians killed</p>
+            <p><strong>Children:</strong> More than 14,000 children martyred</p>
+            <p><strong>Women:</strong> Over 9,000 women martyred</p>
+            <p><strong>Injured:</strong> Approximately 79,000 people injured</p>
+            <p><strong>Displaced:</strong> About 1.9 million people displaced (85% of population)</p>
+        </div>
+        
+        <!-- Image with invalid address to show alt text -->
+        <img src="invalid-image-path.jpg" alt="This alternate text appears when the image cannot be loaded - showing destruction in Gaza">
+        
+        <p>The scale of destruction in Gaza is unprecedented, with entire neighborhoods reduced to rubble and critical infrastructure completely demolished.</p>
+        
+        <div class="stat-box">
+            <h3>Infrastructure Damage:</h3>
+            <p><strong>Housing Units:</strong> Over 70% of homes damaged or destroyed</p>
+            <p><strong>Hospitals:</strong> Majority of hospitals non-functional</p>
+            <p><strong>Schools:</strong> More than 80% of schools damaged</p>
+            <p><strong>Water Systems:</strong> Most water and sanitation systems destroyed</p>
+            <p><strong>Economic Loss:</strong> Estimated $18.5 billion in damage</p>
+        </div>
+        
+        <!-- Image with valid address -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Gaza_Strip_%287308913162%29.jpg/800px-Gaza_Strip_%287308913162%29.jpg" alt="Aerial view of Gaza Strip showing urban areas">
+        
+        <p>This paragraph demonstrates how text flows around an image when placed in the middle of content. <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Gaza_Strip_%287308913162%29.jpg/300px-Gaza_Strip_%287308913162%29.jpg" alt="Small image of Gaza" style="display: inline; width: 150px; height: auto; margin: 0 10px;"> The text continues to wrap around the image, creating an integrated layout where both elements share the same space.</p>
+        
+        <h2>Video About the Humanitarian Crisis</h2>
+        <video controls>
+            <source src="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p style="text-align: center; font-style: italic;">Video showing the humanitarian situation and famine conditions in Gaza</p>
+    </div>
+    
+    <h1>Links & Resources</h1>
+    
+    <ul>
+        <li><a href="https://www.ochaopt.org/">UN Office for the Coordination of Humanitarian Affairs (OCHA)</a></li>
+        <li><a href="https://www.unrwa.org/">UN Relief and Works Agency for Palestine Refugees (UNRWA)</a></li>
+        <li><a href="Lab1_Exo1.html">Palestine Information Card (Exercise 1)</a></li>
+        <li><a href="https://www.amnesty.org/en/latest/news/2024/03/israels-apartheid-against-palestinians-a-cruel-system-of-domination-and-a-crime-against-humanity/" target="_blank">Amnesty International Report (opens in new tab)</a></li>
+        <li><a href="Lab1_Exo1.html#point1">Link to History Section in Exercise 1</a></li>
+        <li><a href="#top">Go to Top of Page</a></li>
+    </ul>
+
+    <script>
+        // Simple script to demonstrate basic functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Gaza Genocide Information Page Loaded');
+            
+            // Add click event to all links for tracking
+            const links = document.querySelectorAll('a');
+            links.forEach(link => {
+                link.addEventListener('click', function() {
+                    console.log('Link clicked: ' + this.href);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
