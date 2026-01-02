@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ylogo from '../assets/logo.png';
 import styles from '../styles/Header.module.css';
 import { motion } from 'framer-motion';
 import { FaBars, FaTimes } from 'react-icons/fa';
@@ -21,7 +22,11 @@ const Header = () => {
           animate={{ opacity: 1, x: 0 }}
           className={styles.logo}
         >
-          <span className={styles.logoText}>My Portfolio</span>
+          <img
+            src={ylogo}
+            alt="logo"
+            className={styles.logoImage}
+          />
         </motion.div>
 
         {/* Desktop Navigation */}
@@ -41,7 +46,7 @@ const Header = () => {
         </ul>
 
         {/* Mobile Menu Button */}
-        <button 
+        <button
           className={styles.menuButton}
           onClick={() => setIsOpen(!isOpen)}
         >

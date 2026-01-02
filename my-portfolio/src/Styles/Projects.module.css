@@ -1,4 +1,3 @@
-
 .projects {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   position: relative;
@@ -61,16 +60,23 @@
   padding: 2rem;
   border: 1px solid rgba(255, 255, 255, 0.2);
   position: relative;
-  overflow: hidden;
+  overflow: visible; 
   transition: all 0.3s ease;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  
+
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.2),
+    0 0 0 1px rgba(240, 147, 251, 0.3); 
 }
 
 .card:hover {
   border-color: rgba(255, 255, 255, 0.4);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.3),
+    0 0 15px rgba(240, 147, 251, 0.6), 
+    0 0 25px rgba(102, 126, 234, 0.4); 
 }
-
 .cardIcon {
   position: relative;
   font-size: 3.5rem;
@@ -122,7 +128,7 @@
 .cardDescription {
   color: rgba(255, 255, 255, 0.8);
   line-height: 1.6;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   text-align: center;
 }
 
@@ -257,23 +263,177 @@
   66% { transform: translate(-20px, 20px) rotate(240deg); }
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
-  .projects {
-    padding: 4rem 1rem;
-  }
-  
-  .title {
-    font-size: 2.5rem;
-  }
-  
   .grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1.2rem;
+    padding: 1rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    margin: 0 -1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    position: relative;
+  }
+  
+  .grid::-webkit-scrollbar {
+    display: none;
   }
   
   .card {
+    flex: 0 0 85%;
+    min-width: 300px;
+    max-width: 320px;
+    scroll-snap-align: start;
+    margin-right: 0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    height: auto;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+ 
+    position: relative;
+    overflow: visible; 
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+
+  .card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, 
+      #f093fb, 
+      #667eea, 
+      #764ba2,
+      #f093fb);
+    background-size: 400% 400%;
+    border-radius: 22px;
+    z-index: 0;
+    animation: borderGlow 3s ease-in-out infinite;
+  }
+  
+ 
+  .cardContent {
+    position: relative;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  
+ 
+  .cardDescription {
+    flex-grow: 1;
+    margin-bottom: 0.8rem;
+  }
+  
+  .labParts {
+    margin-bottom: 10px;
+    gap: 6px;
+  }
+  
+  
+  .keyLearning {
+    margin: 10px 0;
+    padding: 10px;
+  }
+  
+
+  .githubLink {
+    margin-top: auto;
+    width: 100%;
+    display: flex !important;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .grid::after {
+    content: '← swipe →';
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.8rem;
+    pointer-events: none;
+    animation: swipeHint 2s infinite;
+  }
+  
+  @keyframes swipeHint {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+  }
+  
+  .scrollIndicator {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  
+  .scrollDot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: background 0.3s ease;
+  }
+  
+  .scrollDot.active {
+    background: rgba(255, 255, 255, 0.8);
+    transform: scale(1.2);
+  }
+  
+  .card:last-child {
+    margin-right: 1rem;
+  }
+  
+  
+  .floatingElements {
+    display: none;
+  }
+}
+
+@keyframes borderGlow {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    gap: 1rem;
+    padding: 0.8rem;
+  }
+  
+  .card {
+    flex: 0 0 90%;
+    min-width: 280px;
+    min-height: 480px;
     padding: 1.5rem;
+  }
+  
+  .cardTitle {
+    font-size: 1.3rem;
   }
 }
 
@@ -318,8 +478,8 @@
   right: -10px;
   background: linear-gradient(45deg, #f093fb, #f5576c);
   color: white;
-  width: 40px;
-  height: 40px;
+  width: 65px;
+  height: 65px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -327,9 +487,9 @@
   font-weight: bold;
   font-size: 0.9rem;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 3; 
 }
 
-/* Specific icon colors */
 .htmlIcon {
   color: #E34F26;
 }
@@ -361,4 +521,3 @@
 .kanbanIcon {
   color: #0079BF;
 }
-

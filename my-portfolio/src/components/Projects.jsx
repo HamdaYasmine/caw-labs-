@@ -19,17 +19,17 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "Lab 1: HTML & CSS Mastery",
-      description: "Created responsive web pages with proper HTML structure and CSS styling. Learned semantic HTML and CSS selectors.",
+      title: "HTML & CSS Mastery",
+      description: "Created web pages with proper HTML structure and CSS styling. Learned semantic HTML and CSS selectors.",
       tech: ["HTML5", "CSS3"],
       github: "https://github.com/HamdaYasmine/caw-labs-/tree/master/Lab1", 
       icon: <FaHtml5 className={styles.htmlIcon} />,
-      parts: ["Part 1: HTML Structure", "Part 2: CSS Styling"],
-      keyLearning: "Web Fundamentals"
+      parts: ["Part1: HTML Structure", "Part2: CSS Styling"],
+      keyLearning:"Web Fundamentals"
     },
     {
       id: 2,
-      title: "Lab 2: Git & GitHub",
+      title: "Git & GitHub",
       description: "Mastered version control with Git, managed repositories, and collaborated using GitHub for project storage.",
       tech: ["Git", "GitHub", "Version Control"],
       github: "https://github.com/HamdaYasmine/caw-labs-/tree/lab2-setup", 
@@ -39,7 +39,7 @@ const Projects = () => {
     },
     {
       id: 3,
-      title: "Lab 3: Node.js & NPM",
+      title: "Node.js & NPM",
       description: "Set up Node.js environment, managed packages with NPM, and understood backend JavaScript runtime.",
       tech: ["Node.js", "NPM", "JavaScript"],
       github: "https://github.com/HamdaYasmine/caw-labs-/tree/master/Lab3.G3_HamdaYasmine", 
@@ -49,7 +49,7 @@ const Projects = () => {
     },
     {
       id: 4,
-      title: "Lab 4: Jest Testing",
+      title: "Jest Testing",
       description: "Implemented unit tests for JavaScript modules using Jest testing framework.",
       tech: ["Jest", "Testing", "JavaScript"],
       github: "https://github.com/HamdaYasmine/caw-labs-/tree/main/Lab4_Jest", 
@@ -59,22 +59,22 @@ const Projects = () => {
     },
     {
       id: 5,
-      title: "Lab 5: React Components",
+      title: "React Components",
       description: "Built interactive UIs using React functional components and understood component lifecycle.",
-      tech: ["React", "Components", "JSX"],
+      tech: ["React", "JSX", "Components"],
       github: "https://github.com/HamdaYasmine/caw-labs-/tree/master/src", 
       icon: <FaReact className={styles.reactIcon} />,
-      parts: ["Functional Components", "Props & State"],
+      parts: ["Functional Components", "Props&State"],
       keyLearning: "React Basics"
     },
     {
       id: 6,
-      title: "Lab 7: Kanban Board",
+      title: "Kanban Board",
       description: "Developed a Trello-like task management board with drag-and-drop functionality using React.",
-      tech: ["React", "State Management", "UI/UX"],
+      tech: ["React", "UI/UX", "State Management"],
       github: "https://github.com/HamdaYasmine/caw-labs-/tree/main/kanban-board", 
       icon: <FaTrello className={styles.kanbanIcon} />,
-      parts: ["Drag & Drop", "Task Management"],
+      parts: ["Drag&Drop", "Task Management"],
       keyLearning: "React Application"
     }
   ];

@@ -18,7 +18,7 @@ const Home = () => {
           transition={{ duration: 1 }}
           className={styles.content}
         >
-          {/* my pic */}
+          
           <motion.div
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
@@ -27,7 +27,7 @@ const Home = () => {
           >
             <img 
              src={yasmineImage} 
-             alt="Yasmine Hamda"
+             alt="Yasmine"
              className={styles.profileImage}
            />
             <div className={styles.imageGlow}></div>
